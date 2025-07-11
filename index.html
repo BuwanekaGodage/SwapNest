@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SkillSwap - Open Source Skills Exchange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .main-color {
+        --main-blue: #2596be;
+      }
+      .gradient-bg {
+        background: linear-gradient(270deg, #2596be, #1f85ac, #1c7a9e, #2389bb);
+        background-size: 800% 800%;
+        animation: gradientAnimation 20s ease infinite;
+      }
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      /* Override Tailwind colors with the main blue where needed */
+      .text-main {
+        color: var(--main-blue);
+      }
+      .bg-main {
+        background-color: var(--main-blue);
+      }
+      .border-main {
+        border-color: var(--main-blue);
+      }
+      .hover\:bg-main-dark:hover {
+        background-color: #1f85ac;
+      }
+      .hover\:text-main-dark:hover {
+        color: #1f85ac;
+      }
+      .bg-main-light {
+        background-color: #e1f0f9;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col main-color">
+    <!-- Header -->
+    <header class="gradient-bg shadow-md">
+      <nav
+        class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <div
+          class="text-white font-extrabold text-2xl cursor-pointer select-none"
+        >
+          SkillSwap
+        </div>
+        <ul class="flex space-x-8 text-white font-semibold">
+          <li>
+            <a href="#features" class="hover:text-gray-300 transition"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a href="#how-it-works" class="hover:text-gray-300 transition"
+              >How it Works</a
+            >
+          </li>
+          <li>
+            <a href="#contribute" class="hover:text-gray-300 transition"
+              >Contribute</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/BuwanekaGodage/SwapNest"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-gray-300 transition flex items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 mr-1"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.385-1.333-1.754-1.333-1.754-1.089-.745.082-.73.082-.73 1.205.086 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.76-1.605-2.665-.304-5.466-1.334-5.466-5.933 0-1.31.467-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.007-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.553 3.295-1.23 3.295-1.23.654 1.653.243 2.873.12 3.176.77.84 1.232 1.91 1.232 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.823 1.103.823 2.222v3.293c0 .322.217.694.825.576C20.565 21.796 24 17.298 24 12c0-6.628-5.372-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main class="flex-grow flex items-center justify-center px-6 py-20">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12"
+      >
+        <div class="md:flex-1 text-center md:text-left">
+          <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+            Swap Skills, Learn Together, Grow Faster
+          </h1>
+          <p class="text-gray-700 text-lg mb-8 max-w-xl mx-auto md:mx-0">
+            SkillSwap is an open-source platform where you can exchange your
+            skills with others, collaborate on projects, and build your network.
+          </p>
+          <div class="flex justify-center md:justify-start gap-4">
+            <a
+              href="#contribute"
+              class="px-8 py-4 bg-main text-white rounded-lg font-semibold hover:bg-main-dark transition"
+            >
+              Get Involved
+            </a>
+            <a
+              href="https://github.com/BuwanekaGodage/SwapNest"
+              target="_blank"
+              rel="noopener"
+              class="px-8 py-4 border border-main text-main rounded-lg font-semibold hover:bg-main-light transition"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="md:flex-1">
+          <img
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
+            alt="People collaborating"
+            class="rounded-lg shadow-lg mx-auto max-w-full"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-white py-20 px-6">
+      <div class="max-w-7xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Features</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto">
+          Connect with people worldwide, share what you know, learn new skills,
+          and collaborate on exciting projects.
+        </p>
+      </div>
+      <div
+        class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center"
+      >
+        <div>
+          <div class="mx-auto mb-4 w-16 h-16 text-main">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              class="w-full h-full"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8 7V3m8 4V3m-9 8h10m-7 4h4"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Skill Exchange</h3>
+          <p class="text-gray-600">
+            Teach your expertise and learn from others in a supportive
+            community.
+          </p>
+        </div>
+        <div>
+          <div class="mx-auto mb-4 w-16 h-16 text-main">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              class="w-full h-full"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17 20h5v-2a3 3 0 00-3-3h-4"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 20H4v-2a3 3 0 013-3h4"
+              ></path>
+              <circle
+                cx="12"
+                cy="7"
+                r="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></circle>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Community Driven</h3>
+          <p class="text-gray-600">
+            Open-source and fueled by passionate contributors worldwide.
+          </p>
+        </div>
+        <div>
+          <div class="mx-auto mb-4 w-16 h-16 text-main">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              class="w-full h-full"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M20 12H4"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 20V4"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Project Collaboration</h3>
+          <p class="text-gray-600">
+            Work together on projects that help build real-world skills and
+            portfolios.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="bg-main-light py-20 px-6">
+      <div class="max-w-7xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-main mb-4">How It Works</h2>
+        <p class="text-main max-w-3xl mx-auto mb-12">
+          Join the SkillSwap community in 3 simple steps:
+        </p>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="bg-white p-8 rounded-lg shadow text-left">
+            <div class="text-main mb-4 text-4xl font-bold">1</div>
+            <h3 class="font-semibold text-lg mb-2">Sign Up</h3>
+            <p class="text-main">Create your free account to get started.</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow text-left">
+            <div class="text-main mb-4 text-4xl font-bold">2</div>
+            <h3 class="font-semibold text-lg mb-2">List Your Skills</h3>
+            <p class="text-main">
+              Tell the community what you can teach and what you want to learn.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow text-left">
+            <div class="text-main mb-4 text-4xl font-bold">3</div>
+            <h3 class="font-semibold text-lg mb-2">Connect & Swap</h3>
+            <p class="text-main">
+              Find matches, chat, and start exchanging skills!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contribute Section -->
+    <section id="contribute" class="bg-white py-20 px-6 text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-6">
+        Contribute to SkillSwap
+      </h2>
+      <p class="max-w-3xl mx-auto text-gray-700 mb-8">
+        SkillSwap is a community-driven open-source project. Help us improve by
+        contributing code, ideas, or documentation.
+      </p>
+      <a
+        href="https://github.com/BuwanekaGodage/SwapNest"
+        target="_blank"
+        rel="noopener"
+        class="inline-block bg-main text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-main-dark transition"
+      >
+        Visit GitHub Repo
+      </a>
+    </section>
+
+    <footer class="bg-gray-100 text-gray-600 py-6 text-center text-sm">
+      © 2025 SkillSwap. Open source for everyone.
+    </footer>
+  </body>
+</html>
